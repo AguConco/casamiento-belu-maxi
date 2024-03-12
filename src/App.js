@@ -6,57 +6,17 @@ import img3 from './assets/img/img3.jpeg'
 import img4 from './assets/img/img4.jpeg'
 import img6 from './assets/img/img6.jpeg'
 import { Counter } from './components/Counter/Counter'
+import { Date } from './components/Date/Date'
+import { Events } from './components/Events/Events'
 import { Hero } from './components/Hero/Hero'
 
 export const App = () => {
     return (
         <main>
             <Hero />
-            <section className='section2'>
-                <p>
-                    <span>Sábado</span>
-                    <span className='number-day'>19</span>
-                    <span>Octubre </span>
-                    <span className='number-year'>2024</span>
-                </p>
-                <div></div>
-            </section>
+            <Date />
             <Counter />
-            <section className='section4'>
-                <div className='color1'></div>
-                <div className='color3'></div>
-                <div className='ceremony'>
-                    {icon1}
-                    <h3>Ceremonia Religiosa</h3>
-                    <p>
-                        <span>Hora</span>
-                        20:15
-                    </p>
-                    <p>
-                        <span>Lugar</span>
-                        Catedral San Rafael
-                    </p>
-                    <a href="https://www.google.com/maps/place/Catedral+San+Rafael/@-31.2538558,-61.4943597,17z/data=!3m1!4b1!4m6!3m5!1s0x95caae37f4ad98e7:0x70298b01c7633f9e!8m2!3d-31.2538604!4d-61.4917848!16s%2Fg%2F1hc0sxzqw?entry=ttu" target="_blank" rel="noopener noreferrer">ver ubicación</a>
-                </div>
-                <div className="divisor">
-                    <div></div>
-                    {iconDivisor}
-                    <div></div>
-                </div>
-                <div className='celebration'>
-                    {icon2}
-                    <h3>Celebración</h3>
-                    <p>
-                        <span>Hora</span>
-                        21:00
-                    </p>
-                    <p>
-                        <span>Lugar</span>
-                        Tipuana Tipu
-                    </p>
-                    <a href="https://www.google.com/maps/place/Tipuana+Tipu/@-31.2590845,-61.4668876,17z/data=!3m1!4b1!4m6!3m5!1s0x95caaf01a843c1ef:0xbdfa35e2b3fae283!8m2!3d-31.2590891!4d-61.4643127!16s%2Fg%2F11f0kxn8fv?entry=ttu" target="_blank" rel="noopener noreferrer">ver ubicación</a>
-                </div>
-            </section>
+            <Events />
             <section className='section5'>
                 <div>
                     {icon3}
@@ -107,7 +67,7 @@ export const App = () => {
                 <img src={img6} />
             </section>
             <footer>
-                <p>Hecho por <a href='https://agustin-concollato.netlify.app' target="_blank" rel="noopener noreferrer">Agustin Concollato</a></p>
+                {/* <p>Hecho por <a href='https://agustin-concollato.netlify.app' target="_blank" rel="noopener noreferrer">Agustin Concollato</a></p> */}
             </footer>
         </main>
     )
