@@ -1,6 +1,7 @@
 .section2 {
     position: relative;
     margin: 30px 0 80px;
+    animation: fadeHero .5s 1;
 }
 
 .section2 div {

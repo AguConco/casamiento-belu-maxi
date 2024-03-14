@@ -1,6 +1,11 @@
 .section4 {
     margin: 200px 0;
     position: relative;
+}
+
+.section4>div {
+    max-width: 768px;
+    margin: auto;
     display: flex;
     gap: 100px;
     justify-content: center;
@@ -37,22 +42,32 @@
 .color1 {
     height: 130%;
     width: 200%;
-    transform: rotate(5deg);
+    transform: rotate(0deg);
     position: absolute;
     top: -57px;
     left: -50%;
     background: var(--color-1);
     z-index: 10;
+    transition: .5s;
 }
 
 .color3 {
     height: 130%;
     width: 200%;
-    transform: rotate(-5deg);
+    transform: rotate(0deg);
     position: absolute;
     top: -57px;
     left: -50%;
     background: var(--color-3);
+    transition: .5s;
+}
+
+.color1Animation {
+    transform: rotate(3deg);
+}
+
+.color3Animation {
+    transform: rotate(-3deg);
 }
 
 .divisor {
@@ -74,12 +89,9 @@
 }
 
 @media (max-width: 768px) {
-    .section4 {
-        margin: 200px 0;
-        position: relative;
-        display: flex;
+
+    .section4>div {
         flex-direction: column;
-        gap: 100px;
     }
 
     .ceremony,
@@ -112,7 +124,7 @@
     .color1 {
         height: 110%;
         width: 200%;
-        transform: rotate(10deg);
+        transform: rotate(0deg);
         position: absolute;
         top: -57px;
         left: -50%;
@@ -123,11 +135,19 @@
     .color3 {
         height: 110%;
         width: 200%;
-        transform: rotate(-10deg);
+        transform: rotate(0deg);
         position: absolute;
         top: -57px;
         left: -50%;
         background: var(--color-3);
+    }
+
+    .color1Animation {
+        transform: rotate(10deg);
+    }
+    
+    .color3Animation {
+        transform: rotate(-10deg);
     }
 
     .divisor {
@@ -146,5 +166,5 @@
         width: 60px;
         background: var(--color-4);
         transform: rotate(0deg);
-    }   
+    }
 }

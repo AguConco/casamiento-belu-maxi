@@ -35,6 +35,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .day-counter div span:first-child {
@@ -44,6 +45,21 @@
 .day-counter div span:last-child {
     font-size: 28px;
 }
+
+@keyframes moveUp {
+    0%, 100% {
+        transform: scale(.5);
+    }
+    
+    50% {
+        transform: scale(1);
+    }
+}
+
+.number-animation {
+    animation: moveUp 1s ease-out 1;
+}
+
 
 @media (max-width: 768px) {
     .section3 h4:first-child {

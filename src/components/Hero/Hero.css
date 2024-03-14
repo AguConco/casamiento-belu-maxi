@@ -1,12 +1,13 @@
 .container-img5 {
     width: 100%;
     position: relative;
-    max-width: 768px;
+    max-height: 700px;
     margin: auto;
+    overflow: hidden;
 }
 
 .container-img5 img {
-    object-fit: contain;
+    object-fit: cover;
     width: 100%;
     height: 100%;
     position: relative;
@@ -16,11 +17,27 @@
 .background-fade {
     position: absolute;
     top: 0;
-    left: -1px;
+    left: 0;
     height: 100%;
     width: 100%;
     background: linear-gradient(transparent, #fff 60%);
-    min-width: 770px;
+}
+
+.section1 {
+    animation: fadeHero .5s 1;
+    position: relative;
+}
+
+@keyframes fadeHero {
+    0% {
+        top: 200px;
+        opacity: .5;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+    }
 }
 
 h1 {
@@ -46,7 +63,7 @@ h1 span {
 
 .section1 p {
     transform: translateY(-100px);
-    font-size: 52px;
+    font-size: 42px;
     text-align: center;
     display: block;
     margin: auto;
@@ -61,6 +78,10 @@ h1 span {
 
     .background-fade {
         background: linear-gradient(transparent, #fff 75%);
+    }
+
+    .container-img5 img {
+        top: 0;
     }
 
     h1 {

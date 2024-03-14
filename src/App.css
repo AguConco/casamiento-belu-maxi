@@ -69,8 +69,14 @@ a {
   padding: 10px 15px;
   outline: auto;
   text-align: center;
+  transition: .3s;
 }
 
+a:hover {
+  background: #f8ece4;
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px #00000010;
+}
 
 p {
   font-family: var(--font-5);
@@ -107,77 +113,8 @@ h4 {
   display: block;
 }
 
-.section5 div {
-  border: 1px solid #d9d9d9;
-  border-radius: 10px;
-  margin: 0 20px;
-  box-shadow: 0 10px 20px #00000010;
-  padding: 30px 0;
-}
-
-.section5 p {
-  font-size: 28px;
-  text-align: center;
-  line-height: 25px;
-  margin-top: 15px;
-  -webkit-text-stroke: .5px var(--color-6);
-  padding: 0 10px
-}
-
-.section5 a {
-  margin-bottom: 0;
-}
-
-.section6,
 .section7 {
   margin: 80px 0;
-}
-
-.section6 {
-  padding: 0 20px;
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 100px);
-  grid-template-areas:
-    'img1 img2'
-    'img1 img3'
-    'img1 img4';
-  height: 345px;
-}
-
-.section6 div {
-  display: flex;
-  gap: 15px;
-}
-
-.section6 div div {
-  width: 40px;
-  height: 100%;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.section6 div div span {
-  font-family: var(--font-1);
-  font-size: 20px;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  letter-spacing: -5px;
-  color: var(--color-4);
-}
-
-.img-1 {
-  grid-area: img1;
-}
-
-.section6 img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 10px;
 }
 
 .section7 p {
@@ -185,8 +122,9 @@ h4 {
   padding: 0 20px;
   text-align: center;
   line-height: 25px;
-  margin-top: 30px;
   -webkit-text-stroke: 0.5px var(--color-6);
+  max-width: 768px;
+  margin: 30px auto 0;
 }
 
 .section7 p span {

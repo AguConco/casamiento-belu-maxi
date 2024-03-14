@@ -1,13 +1,11 @@
 import './App.css'
-import { icon1, icon2, icon3, icon4, icon5, icon6, iconDivisor } from './assets/icons/icons'
-import img2 from './assets/img/img1.jpeg'
-import img1 from './assets/img/img2.jpeg'
-import img3 from './assets/img/img3.jpeg'
-import img4 from './assets/img/img4.jpeg'
+import { icon4, icon5, icon6 } from './assets/icons/icons'
 import img6 from './assets/img/img6.jpeg'
+import { ConfirmAssistance } from './components/ConfirmAssistance/ConfirmAssistance'
 import { Counter } from './components/Counter/Counter'
 import { Date } from './components/Date/Date'
 import { Events } from './components/Events/Events'
+import { Gallery } from './components/Gallery/Gallery'
 import { Hero } from './components/Hero/Hero'
 
 export const App = () => {
@@ -17,28 +15,8 @@ export const App = () => {
             <Date />
             <Counter />
             <Events />
-            <section className='section5'>
-                <div>
-                    {icon3}
-                    <h3>¿Nos acompañas?</h3>
-                    <p>Tenés tiempo para confirmar tu asistencia hasta el 13/09</p>
-                    <a href="#" target="_blank" rel="noopener noreferrer">confirmar asistencia</a>
-                </div>
-            </section>
-            <section className='section6'>
-                <div className='img-1'> <img src={img1} /> </div>
-                <div className='img-2'> <img src={img2} />
-                    <div>
-                        <span>MAXI</span>
-                    </div>
-                </div>
-                <div className='img-3'> <img src={img3} /> </div>
-                <div className='img-4'>
-                    <div>
-                        <span>BELU</span>
-                    </div>
-                    <img src={img4} /> </div>
-            </section>
+            <ConfirmAssistance />
+            <Gallery />
             <section className='section7'>
                 <div>
                     {icon4}
