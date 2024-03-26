@@ -10,7 +10,7 @@ export const Events = () => {
     
     document.onscroll = () => {
         const positionSection = sectionRef.current.offsetTop
-        if(window.scrollY >= positionSection - positionSection / 2) {
+        if(window.scrollY >= positionSection - positionSection / 3) {
             color1Ref.current.classList.add('color1Animation')
             color3Ref.current.classList.add('color3Animation')
         }

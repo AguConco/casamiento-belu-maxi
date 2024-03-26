@@ -3,12 +3,11 @@ import './Counter.css';
 import { DataCounter } from "./DataCounter";
 
 export const Counter = () => {
-    const [timeRemaining, setTimeRemaining] = useState({
-        days: [0, 'días'],
-        hours: [0, 'horas'],
-        minutes: [0, 'minutos'],
-        seconds: [0, 'segundos']
-    });
+    const [days, setDays] = useState()
+    const [hours, setHours] = useState()
+    const [minutes, setMinutes] = useState()
+    const [seconds, setSeconds] = useState()
+
 
     useEffect(() => {
         const eventDate = new Date('2024-10-19T20:00:00').getTime();
@@ -22,21 +21,17 @@ export const Counter = () => {
             const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
             const seconds = Math.floor((difference % (1000 * 60)) / 1000)
 
-            setTimeRemaining({
-                days: [days, 'días'],
-                hours: [hours, 'horas'],
-                minutes: [minutes, 'minutos'],
-                seconds: [seconds, 'segundos']
-            })
+            setDays(days)
+            setHours(hours)
+            setMinutes(minutes)
+            setSeconds(seconds)
 
             if (difference < 0) {
                 clearInterval(interval)
-                setTimeRemaining({
-                    days: [0, 'días'],
-                    hours: [0, 'horas'],
-                    minutes: [0, 'minutos'],
-                    seconds: [0, 'segundos']
-                })
+                setDays(0)
+                setHours(0)
+                setMinutes(0)
+                setSeconds(0)
             }
         }, 1000)
 
@@ -47,23 +42,35 @@ export const Counter = () => {
         <section className='section3'>
             <h4>faltan</h4>
             <div className='day-counter'>
-                <DataCounter data={timeRemaining.days} />
                 <div>
-                    <span>:</span>
-                    <span></span>
+                    <DataCounter data={days} />
+                    <span>días</span>
                 </div>
-                <DataCounter data={timeRemaining.hours} />
-                <div>
-                    <span>:</span>
-                    <span></span>
-                </div>
-                <DataCounter data={timeRemaining.minutes} />
 
                 <div>
-                    <span>:</span>
-                    <span></span>
+                    <pre>:</pre>
                 </div>
-                <DataCounter data={timeRemaining.seconds} />
+                <div>
+                    <DataCounter data={hours} />
+                    <span>horas</span>
+                </div>
+
+                <div>
+                    <pre>:</pre>
+                </div>
+                <div>
+                    <DataCounter data={minutes} />
+                    <span>minutos</span>
+                </div>
+
+
+                <div>
+                    <pre>:</pre>
+                </div>
+                <div>
+                    <DataCounter data={seconds} />
+                    <span>segundos</span>
+                </div>
 
             </div>
             <h4>para el ¡Si quiero!</h4>

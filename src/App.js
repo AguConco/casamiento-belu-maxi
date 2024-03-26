@@ -1,5 +1,5 @@
 import './App.css'
-import { icon4, icon5, icon6 } from './assets/icons/icons'
+import { icon5, icon6 } from './assets/icons/icons'
 import img6 from './assets/img/img6.jpeg'
 import { ConfirmAssistance } from './components/ConfirmAssistance/ConfirmAssistance'
 import { Counter } from './components/Counter/Counter'
@@ -7,6 +7,7 @@ import { Date } from './components/Date/Date'
 import { Events } from './components/Events/Events'
 import { Gallery } from './components/Gallery/Gallery'
 import { Hero } from './components/Hero/Hero'
+import { Gifts } from './components/Gifts/Gifts'
 
 export const App = () => {
     return (
@@ -17,20 +18,13 @@ export const App = () => {
             <Events />
             <ConfirmAssistance />
             <Gallery />
-            <section className='section7'>
-                <div>
-                    {icon4}
-                    <h3>Regalos</h3>
-                    <p>Lo que más queremos es compartir con vos nuestro gran día, pero si quisieras ayudarnos con nuestra <span>luna de miel</span>  podes hacer click en el siguiente botón</p>
-                    <a href="#" target="_blank" rel="noopener noreferrer">Más información</a>
-                </div>
-            </section>
+            <Gifts />
             <section className='section7'>
                 <div>
                     {icon5}
                     <h3>No es una fiesta si no suena....</h3>
                     <p>¿Qué tema no puede faltar en nuestra fiesta? ¡Ayúdanos a armar la lista!</p>
-                    <a href="#" target="_blank" rel="noopener noreferrer">añadir tema</a>
+                    <a href="https://open.spotify.com/playlist/4V1inIyq2KEggohtRUPaLl?si=ReIkkt-1RXSawwQRDulxtQ&nd=1&dlsi=8fce797f1eba494d" target="_blank" rel="noopener noreferrer">añadir tema</a>
                 </div>
             </section>
             <section className='section7'>
@@ -45,7 +39,7 @@ export const App = () => {
                 <img src={img6} />
             </section>
             <footer>
-                {/* <p>Hecho por <a href='https://agustin-concollato.netlify.app' target="_blank" rel="noopener noreferrer">Agustin Concollato</a></p> */}
+                <p>Hecho por <a href='https://agustin-concollato.netlify.app' target="_blank" rel="noopener noreferrer">Agustin Concollato</a></p>
             </footer>
         </main>
     )
