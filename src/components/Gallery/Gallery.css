@@ -47,7 +47,7 @@
     .section6::-webkit-scrollbar {
         appearance: none;
     }
-    
+
     .section6 div {
         scroll-snap-align: center;
         display: flex;
@@ -82,5 +82,16 @@
         width: 100%;
         object-fit: cover;
         border-radius: 10px;
+    }
+}
+
+@media (max-width: 325px) {
+
+    .section8 h4 {
+        font-size: 39px;
+    }
+
+    .section6 {
+        height: 300px;
     }
 }
