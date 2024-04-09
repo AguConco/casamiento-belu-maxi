@@ -1,0 +1,123 @@
+.section6 {
+    margin: 150px auto;
+    max-width: 768px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas:
+        'img1 img2'
+        'img1 img3'
+        'img1 img4';
+    overflow: hidden;
+}
+
+.section6 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.section6 div {
+    display: flex;
+    position: relative;
+    transition: .8s ease-out;
+    animation-iteration-count: 1;
+    animation-duration: .8s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.img-1 {
+    grid-area: img1;
+}
+
+.img-2 {
+    animation-delay: .2s;
+}
+
+.img-3 {
+    animation-delay: .5s;
+}
+
+.img-4 {
+    animation-delay: .8s;
+}
+
+@keyframes downUpOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .section6 {
+        margin: 80px 0;
+        grid-template-rows: repeat(3, 150px);
+    }
+
+    .section6 {
+        padding: 0 20px;
+        display: flex;
+        height: 345px;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+    }
+
+    .section6::-webkit-scrollbar {
+        appearance: none;
+    }
+
+    .section6 div {
+        scroll-snap-align: center;
+        display: flex;
+        flex: none;
+        aspect-ratio: 1/1.05;
+    }
+
+    .section6 div div {
+        width: 40px;
+        height: 100%;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section6 div div span {
+        font-family: var(--font-1);
+        font-size: 20px;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        letter-spacing: -5px;
+        color: var(--color-4);
+    }
+
+    .img-1 {
+        grid-area: img1;
+    }
+
+    .section6 img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 325px) {
+
+    .section8 h4 {
+        font-size: 39px;
+    }
+
+    .section6 {
+        height: 300px;
+    }
+}
