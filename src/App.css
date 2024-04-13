@@ -172,6 +172,34 @@ footer a:hover {
   text-decoration: underline;
 }
 
+.loading {
+  animation: loading 1s infinite linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+  width: 94px;
+}
+
+
+@keyframes loading {
+  0%, 100% {
+    transform: scale(.8);
+    opacity: .5;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .loading {
+    height: 35px;
+    width: 35px;
+  }
+}
+
 @media (max-width: 380px) {
   h3 {
     padding: 0 20px;
