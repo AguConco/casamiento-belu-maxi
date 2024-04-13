@@ -32,7 +32,7 @@ export const Playlist = () => {
     return (
         <div className="playlist">
             <header>
-                <Link to={'#'} onClick={() => window.history.back()}><FontAwesomeIcon icon={faAngleLeft} size="2xs" /> Volver</Link>
+                <Link to={'/'}><FontAwesomeIcon icon={faAngleLeft} size="2xs" /> Invitación</Link>
                 <h3>Añadir tema a la playlist</h3>
                 <input className="search" type='text' placeholder="Buscar canción" onKeyUp={async (e) => setList(await searchSpotify(e))} />
             </header>

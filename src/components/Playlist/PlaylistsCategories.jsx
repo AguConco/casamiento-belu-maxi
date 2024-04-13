@@ -3,6 +3,8 @@ import { PlaylistContext } from "../../context/PlaylistContext"
 import { Category } from "./Category"
 import { Link, useParams, useLocation } from "react-router-dom"
 import { Song } from "./Song"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faAngleLeft } from "@fortawesome/free-solid-svg-icons"
 
 export const PlaylistCategoies = () => {
 
@@ -25,7 +27,7 @@ export const PlaylistCategoies = () => {
     const url = params.get('url');
     const search = params.get('search');
 
-    const category ={
+    const category = {
         name,
         id,
         icons: [{
@@ -47,7 +49,10 @@ export const PlaylistCategoies = () => {
         token &&
         <ul className="playlists-category">
             <li className="category-detail">
-                <Category e={category} />
+                <ul>
+                    <Link to={'#'} onClick={() => window.history.back()}><FontAwesomeIcon icon={faAngleLeft} /></Link>
+                    <Category e={category} />
+                </ul>
             </li>
             {search === 'category'
                 ? list.map(e =>
